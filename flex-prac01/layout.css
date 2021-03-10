@@ -124,3 +124,50 @@ ul {
 .menuItemWb:nth-child(8){
     margin-right: 0;
 }
+
+.menuItemBest{
+    width:420px;
+    height:auto;
+    margin: 20px 10px 0 10px;
+}
+
+.menuItemBest:nth-child(1){
+    margin-left: 0;
+}
+
+.menuItemBest:nth-child(3){
+    margin-right: 0;
+}
+
+.menuItemBest:nth-child(4){
+    margin-left: 0;
+}
+
+.menuItemBest:nth-child(6){
+    margin-right: 0;
+}
+
+.menuItemPopular{
+    width:200px;
+    height:auto;
+    margin: 20px 10px 0 10px;
+}
+
+.menuItemPopular:first-child{
+    margin-left: 0;
+}
+
+.menuItemPopular:last-child{
+    margin-right: 0;
+}
+
+.popularIndicator{
+    width: 18px;
+    height: 4px;
+    margin: 0 3px;
+    background-color: lightgray;
+}
+
+.popularIndicator:hover{
+    background-color: black;
+}
