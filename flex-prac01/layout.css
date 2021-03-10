@@ -25,6 +25,21 @@ ul {
   margin: 0 auto;
 }
 
+.baseRow{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* background-color: bisque; */
+}
+
+.baseColumn{
+    display: flex;
+    width: 100%;
+    /* background-color: bisque; */
+    flex-direction: column;
+}
+
+
 .mainLogo{
     font-family: 'Pathway Gothic One', sans-serif;
     color: black;
@@ -32,15 +47,42 @@ ul {
     font-size: 50px;
 }
 
-.baseRow{
-    display: flex;
-    width: 100%;
-    /* background-color: bisque; */
-}
 
 .flexCenter{
     justify-content: center;
     align-items: center;
+}
+
+.tagWrap{
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.tagImgWrap{
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+}
+
+.tagImg{
+    width: 30%;
+    height: auto;
+}
+
+.tagItem{
+    padding: 8px 15px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-style: 12px;
+    border-radius: 100px;
+    font-weight: lighter;
+    margin: 15px 8px 0px 8px;
 }
 
 .wrap{
@@ -170,4 +212,35 @@ ul {
 
 .popularIndicator:hover{
     background-color: black;
+}
+
+.grayBox{
+    background-color: rgba(150,150,150,0.1);
+    padding: 90px 0px;
+}
+
+.productWrap{
+    width: 244px;
+    margin: 10px 10px 0 10px;
+}
+
+.productImg{
+    width: 100%;
+    height: auto;
+}
+
+.productWrap:first-child{
+    margin-left: 0;
+}
+
+.productWrap:last-child{
+    margin-right: 0;
+}
+
+.productWrap:nth-child(5n){
+    margin-right: 0;
+}
+
+.productWrap:nth-child(6n){
+    margin-left: 0;
 }
