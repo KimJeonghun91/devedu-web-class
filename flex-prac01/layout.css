@@ -1,0 +1,48 @@
+/* CSS 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+/* CSS 초기화 END */
+.container
+{
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.mainLogo{
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: black;
+    margin: 60px 0 20px 0;
+    font-size: 50px;
+}
+
+.baseRow{
+    display: flex;
+    width: 100%;
+    background-color: bisque;
+}
+
+.header{
+    margin-top: 50px;
+}
+
+.header .headerBtn{
+    padding: 0 12px;
+}
+
+.header .headerText{
+    color: black;
+    font-size: 14px;
+}
