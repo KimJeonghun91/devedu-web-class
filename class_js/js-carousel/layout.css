@@ -1,0 +1,62 @@
+/* CSS 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+div{
+    display: flex;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+/* CSS 초기화 END */
+.container
+{
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.baseRow{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: bisque;
+}
+
+.sliderWrap{
+    width: 1300px;
+    height: 400px;
+    background-color: bisque;
+    flex-wrap:nowrap;
+    overflow-x: hidden;
+}
+
+.sliderItem{
+    width: 1300px;
+    height: 400px;
+    /* flex-shrink를 0으로 세팅하면 아이템의 크기가 flex-basis보다 작아지지 않기 때문에 고정폭의 컬럼을 쉽게 만들 수 있어요. 고정 크기는 width로 설정 */
+    /* flex: 0 0 auto; flex-grow: 0, flex-shrink:auto , flex-basis: auto */
+    flex-basis: 1300px;
+    flex-shrink: 0;
+}
+
+.sliderItem:nth-child(1){
+    background-color: red;
+}
+
+.sliderItem:nth-child(2){
+    background-color: blue;
+}
+
+.sliderItem:nth-child(3){
+    background-color: green;
+}

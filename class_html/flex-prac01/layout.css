@@ -29,7 +29,7 @@ ul {
     display: flex;
     flex-direction: row;
     width: 100%;
-    /* background-color: bisque; */
+    background-color: bisque;
 }
 
 .baseColumn{

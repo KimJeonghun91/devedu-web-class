@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<!-- https://studiomeal.com/archives/197 -->
+<!-- flex-basis는 Flex 아이템의 기본 크기를 설정 -->
+<!-- flex-grow는 아이템이 flex-basis의 값보다 커질 수 있는지를 결정 -->
+<!-- flex-shrink는 flex-grow와 쌍을 이루는 속성으로, 아이템이 flex-basis의 값보다 작아질 수 있는지를 결정 -->
+<!-- flex-shrink를 0으로 세팅하면 아이템의 크기가 flex-basis보다 작아지지 않기 때문에 고정폭의 컬럼을 쉽게 만들 수 있어요. 고정 크기는 width로 설정 -->
+<body>
+    <div style="display: flex; width: 1000px; height: 500px; background-color: bisque;">
+        <div style="display: flex; background-color: brown; width: 100px; height: 100px; ">w:100<br>h:100</div>
+        <div style="display: flex; background-color: blueviolet; flex-basis: 100px; width: 150px; height: 100px; ">
+            w:150<br>h:100<br>basis:100
+        </div>
+        <div style="display: flex; background-color: blueviolet; width: 150px; height: 100px; ">
+            w:150<br>h:100<br>basis:100
+        </div>
+    </div>
+</body>
+
+</html>
