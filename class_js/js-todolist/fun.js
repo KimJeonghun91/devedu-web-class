@@ -3,20 +3,21 @@ const enterBtn = document.querySelector('#enterBtn');
 const enterText = document.querySelector('#enterText');
 
 enterBtn.addEventListener('click', () => {
-    if (!enterText.value) { return alert('내용을 입력해주세요.') }
-
-    const getText = enterText.value;
-
-    const listItem = createItem(getText);
-    itemList.appendChild(listItem)
-
-
-    enterText.value = '';
-    enterText.focus();
+    createItem();
 });
 
 
-const createItem = (getText) => {
+enterText.addEventListener('keypress', event => {
+    if (event.key === 'Enter') {
+        createItem();
+    }
+});
+
+
+const createItem = () => {
+    const getText = enterText.value;
+    if (!getText) { return alert('내용을 입력해주세요.') }
+
     const itemWrap = document.createElement('div');
     itemWrap.setAttribute('class', 'itemWrap');
 
@@ -39,5 +40,14 @@ const createItem = (getText) => {
     itemWrap.appendChild(checkBtn);
     itemWrap.appendChild(itemText);
     itemWrap.appendChild(delBtn);
-    return itemWrap;
+
+
+    // 생성한 아이템을 부모 리스트뷰에 넣는다.
+    itemList.appendChild(itemWrap);
+
+    // 스크롤링
+    itemList.scrollIntoView({ block: 'end' });
+
+    enterText.value = '';
+    enterText.focus();
 }
