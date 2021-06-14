@@ -1,97 +1,36 @@
 <!DOCTYPE html>
 <html>
-
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Browser</title>
   <style>
-    .bgWrap {
-      width: 400px;
-      height: 600px;
-      border-width: 2px;
-      border-style: solid;
-      border-color: lightgray;
-      border-radius: 20px;
-      display: flex;
-      position: relative;
-      flex-direction: column;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .myImg {
-      width: 150px;
-      height: 150px;
-      margin-top: 20px;
-      border-radius: 50%;
-    }
-
-    .nameTitle {
-      margin-top: 10px;
-      font-weight: bold;
-      font-size: larger;
-    }
-
-    .fbAdd {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background-color: lightsteelblue;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 50px;
-      font-weight: bold;
-      color: white;
-      box-shadow: 2px 2px 8px 2px lightgray;
-      cursor:pointer;
-    }
-
-    .listWrap {
-      margin-top: 20px;
+    .selected {
+      background-color: greenyellow;
     }
   </style>
 </head>
-
 
 <body>
-  <div class="bgWrap">
-    <img class="myImg" src="https://kimjeonghun91.github.io/assets/img/me.png" />
-
-    <span class="nameTitle">김정훈의 TODO List</span>
-
-    <div class="listWrap"></div>
-
-
-
-    <div class="fbAdd"><span style="margin-top:8px;">+</span></div>
-  </div>
-
-
-
-  <script type="text/javascript">
-    const fbAddTag = document.querySelector('.fbAdd');
-    fbAddTag.addEventListener('click', function () {
-      const userInput = prompt('할일을 입력해주세요.');
-      if (userInput) {
-
-      }
-    });
-
-
-    const listWrap = document.querySelector('.listWrap');
-    const h2 = document.createElement('h2');
-    h2.setAttribute('class', 'listItem');
-    h2.textContent = '아침 8시에 기상하기';
-
-    listWrap.appendChild(h2);
-  </script>
+  <ul>
+    <li>btn01</li>
+    <li>btn02</li>
+    <li>btn03</li>
+    <li>btn04</li>
+    <li>btn05</li>
+  </ul>
 </body>
-
+
+
+<script type="text/javascript">
+  const ul = document.querySelector('ul');
+  ul.addEventListener('click', event => {
+    console.log("event.target.tagName  : "+event.target.tagName )
+    if (event.target.tagName === 'LI') {
+      event.target.classList.add('selected');
+    }
+  })
+</script>
 
 </html>
