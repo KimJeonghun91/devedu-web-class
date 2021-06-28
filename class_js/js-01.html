@@ -6,31 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Browser</title>
   <style>
-    .selected {
-      background-color: greenyellow;
-    }
   </style>
 </head>
 
 <body>
-  <ul>
-    <li>btn01</li>
-    <li>btn02</li>
-    <li>btn03</li>
-    <li>btn04</li>
-    <li>btn05</li>
-  </ul>
+
 </body>
 
 
 <script type="text/javascript">
-  const ul = document.querySelector('ul');
-  ul.addEventListener('click', event => {
-    console.log("event.target.tagName  : "+event.target.tagName )
-    if (event.target.tagName === 'LI') {
-      event.target.classList.add('selected');
-    }
-  })
+  window.onload = function () {
+    const jsonObj = {"name": "right-hot", "age": 20}
+    console.log("변환전 : "+jsonObj.name);
+
+    const trans = JSON.stringify(jsonObj);
+    console.log("변환후 : "+trans.name);
+  }
 </script>
 
 </html>

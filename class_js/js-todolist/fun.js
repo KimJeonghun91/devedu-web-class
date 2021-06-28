@@ -29,21 +29,28 @@ const createItem = () => {
     itemText.setAttribute('class', 'itemText');
     itemText.innerText = getText;
 
+ 
     const delBtn = document.createElement('span');
+    // <span></span>
+
     delBtn.setAttribute('class', 'material-icons md-48 delBtn');
+    // <span class="material-icons md-48 delBtn"></span>
+
     delBtn.innerText = 'delete';
+    // <span class="material-icons md-48 delBtn">delete</span>
 
     delBtn.addEventListener('click', () => {
         itemList.removeChild(itemWrap);
     })
 
-    itemWrap.appendChild(checkBtn);
-    itemWrap.appendChild(itemText);
-    itemWrap.appendChild(delBtn);
+    itemWrap.appendChild(checkBtn); // 체크 버튼
+    itemWrap.appendChild(itemText); // 할일 텍스트
+    itemWrap.appendChild(delBtn);   // 삭제 버튼
 
 
     // 생성한 아이템을 부모 리스트뷰에 넣는다.
     itemList.appendChild(itemWrap);
+    //   <div id="itemList" class="itemList"></div>
 
     // 스크롤링
     itemList.scrollIntoView({ block: 'end' });
