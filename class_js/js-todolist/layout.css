@@ -78,14 +78,18 @@
     margin-top: 15px;
 }
 
-.checkBtn{
+.checkBtnT{
+    cursor: pointer;
+    color: green; 
+}
+
+.checkBtnF{
     cursor: pointer;
     color: lightgray; 
 }
-
-.checkBtn:hover{
+/* .checkBtn:hover{
     color: green;
-}
+} */
 
 .delBtn{
     cursor: pointer;
@@ -94,4 +98,8 @@
 
 .delBtn:hover{
     color: red;
+}
+
+.uniqSpan{
+    display: none;
 }
