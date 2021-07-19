@@ -16,11 +16,17 @@
 
 <script type="text/javascript">
   window.onload = function () {
-    const jsonObj = {"name": "right-hot", "age": 20}
-    console.log("변환전 : "+jsonObj.name);
+    const array = [
+      { userId: 'rightHot', job: 'SwordsMan', item: ['칼', '방패', '갑옷'] },
+      { userId: 'scoding', job: 'Wizard', item: ['지팡이'] }
+    ];
 
-    const trans = JSON.stringify(jsonObj);
-    console.log("변환후 : "+trans.name);
+    for (const element of array) {
+      console.log('아이디 : '+element.userId);
+      console.log('직업 : '+element.job);
+      console.log('아이템 : '+element.item);
+      console.log('------------------------');
+    }
   }
 </script>
 
